@@ -22,7 +22,6 @@ router.get('/create',(req,res)=>{
 
 router.post('/postform',(req,res)=>{  
     //create    
-    //console.log(req.body) 
     const name=req.body.txtUsername;
     const password=req.body.txtPassword;
     const time=timestamp.utc('DD/MM/YYYY HH:mm:ss');
