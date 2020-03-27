@@ -20,6 +20,11 @@ app.set('view engine','ejs');
 app.set('views',viewPath);
 app.use(express.static(dirPath));
 
+app.get('/*',(req,res)=>{
+    //not found router
+    res.render('error',{error:'404 page not found!'})
+})
+
 server.listen(port,()=>{
     console.log(`server is running on port ${port}`);
 })
